@@ -18,6 +18,7 @@
 		<org.mapstruct.version>1.6.3</org.mapstruct.version>
 		<org.apache.maven.plugins.version>3.13.0</org.apache.maven.plugins.version>
 		<org.codehaus.mojo.version>1.6.0</org.codehaus.mojo.version>
+		<com.fasterxml.jackson.core.version>2.18.2</com.fasterxml.jackson.core.version>
 	</properties>
 
 	<modules>
@@ -36,6 +37,21 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+
+			<!-- Jackson Core -->
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-core</artifactId>
+				<version>${com.fasterxml.jackson.core.version}</version>
+			</dependency>
+
+			<!-- Jackson Databind -->
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>${com.fasterxml.jackson.core.version}</version>
+			</dependency>
+
 
 			<!-- Lombok -->
 			<dependency>
