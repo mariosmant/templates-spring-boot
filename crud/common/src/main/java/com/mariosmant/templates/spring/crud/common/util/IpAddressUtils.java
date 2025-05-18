@@ -2,7 +2,6 @@ package com.mariosmant.templates.spring.crud.common.util;
 
 import jakarta.servlet.http.HttpServletRequest;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class IpAddressUtils {
