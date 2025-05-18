@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="WARN" monitorInterval="30">
     <Properties>
-        <Property name="LOG_PATTERN">%d{yyyy-MM-dd'T'HH:mm:ss.SSSZ} %p %m%n</Property>
+        <Property name="BASE_PACKAGE">com.mariosmant</Property>
+        <Property name="LOG_PATTERN">%d{yyyy-MM-dd'T'HH:mm:ss.SSSZ} [tid:%tid, tn:%t] %-5p %c{1}.%M:%L %X{username} - %m%n</Property>
+        <Property name="ROOT_LOG_LEVEL">info</Property>
     </Properties>
 
     <Appenders>
@@ -11,10 +13,10 @@
     </Appenders>
 
     <Loggers>
-        <Logger name="com.mariosmant.templates.spring.crud.core" additivity="false">
+        <Logger name="${BASE_PACKAGE}.templates.spring.crud.core" additivity="false">
             <AppenderRef ref="Console" />
         </Logger>
-        <Root level="info">
+        <Root level="${ROOT_LOG_LEVEL}">
             <AppenderRef ref="Console" />
         </Root>
     </Loggers>
